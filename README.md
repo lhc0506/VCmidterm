@@ -66,8 +66,9 @@ npm test
  - Friends List Page Basic test
  - Chatting Page Basic Test
 
-### `npm run build`
 ### 배포
+[Netlify를 이용한 배포 Site](https://hochanvacomidterm.netlify.app)
+
 #### 참고사항
  - 현재 Cherry님 과의 대화는 없습니다. 메세지 전송 시 채팅 창에 생성 됩니다.
  - 모달창의 경우 외부 클릭 시 모달이 닫힙니다.
