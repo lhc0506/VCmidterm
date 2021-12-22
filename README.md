@@ -74,3 +74,4 @@ npm test
  - 친구의 id의 경우 채팅앱의 회원가입 아이디라 생각하여, 따로 로직을 만들지 않았습니다. (구분을 위해 1111, 2222 등으로 기존 데이터 설정)
  - 기존 데이터 채팅의 id는 "상대방id-내가보냈는지(Boolean)-보낸날짜시간" 으로 구성되어 있습니다.
  - 새로 저장되는 채팅의 id는 [nanoid](https://github.com/ai/nanoid) Library를 사용하였습니다.
+# VCmidterm
