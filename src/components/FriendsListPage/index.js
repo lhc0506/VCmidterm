@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { debounce } from "lodash";
 import Friend from "./Friend";
 import SearchFriend from "./SearchFriend";
-import { DEBOUNCE_TIME } from '../../app/constants';
+import { DEBOUNCE_TIME } from "../../app/constants";
 
 export default function FriendsListPage() {
   const [isAscending, setIsAscending] = useState(true);

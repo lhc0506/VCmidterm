@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Modal from "../Modal";
-import ChattingPage from "../ChattingPage";
+import ChattingPage from "../ChattingPage"'';
 
 const ProfileImage = styled.img`
   width:80px;

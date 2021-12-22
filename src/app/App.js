@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Header from '../components/Header';
+import Header from "../components/Header";
 import { Route, Switch, Redirect } from "react-router-dom";
-import FriendsListPage from '../components/FriendsListPage';
-import ChatsListPage from '../components/ChatsListPage';
+import FriendsListPage from "../components/FriendsListPage";
+import ChatsListPage from "../components/ChatsListPage";
 import { useDispatch } from "react-redux";
 import { fetchInitialData } from "../features/friendsSlice";
 
