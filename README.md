@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# 바닐라 코딩 Mid Term - 왜 대답이 없어?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**React + React Router + Redux**를 복합적으로 이용해 Single Page Application 스타일의 채팅 페이지를 만들어 보는 과제 입니다.
 
-## Available Scripts
+## 페이지 구조
 
-In the project directory, you can run:
+  - `/friendslist`: 메인, 친구 목록 페이지
+  - `/chatlist`: 채팅 목록 페이지
+  - `/`: `/friendslist`로 이동
+  - 채팅 목록페이지에서 클릭, 혹은 친구 목록에서 대화하기 버튼 클릭 시 해당 인원과의 모달 채팅창 생성
 
-### `npm start`
+## 파일 구조
+```
+📦 src
+ ┣ 📂 app
+ ┃ ┣ 📜 App.js -> Router
+ ┃ ┗ 📜 configureStore.js -> Redux store
+ ┃ ┗ 📜 constants.js
+ ┣ 📂 components
+ ┃ ┣ 📂 ChatsListPage
+ ┃ ┃ ┣ 📜 Chat.js
+ ┃ ┃ ┗ 📜 index.js
+ ┃ ┣ 📂 ChattingPage
+ ┃ ┃ ┗ 📜 index.js
+ ┃ ┣ 📂 FriendsListPage
+ ┃ ┃ ┣ 📜 Friend.js
+ ┃ ┃ ┣ 📜 SearchFriend.js
+ ┃ ┃ ┗ 📜 index.js
+ ┃ ┣ 📂 Header
+ ┃ ┃ ┗ 📜 index.js
+ ┃ ┗ 📂 Modal
+ ┃ ┃ ┗ 📜 index.js
+ ┣ 📂 features
+ ┃ ┗ 📜 friendsSlice.js -> Redux Reducer(by Slice)
+ ┣ 📂 test
+ ┃ ┣ 📜 ChatsListPage.test.js
+ ┃ ┣ 📜 ChattingPage.test.js
+ ┃ ┣ 📜 FriendsListPage.test.js
+ ┃ ┣ 📜 Header.test.js
+ ┃ ┣ 📜 Reducer.test.js
+ ┃ ┗ 📜 mockIntialData.js
+ ┗ 📜 index.js
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+npm install
+```
 
-### `npm test`
+### 실행 방법
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm start
+// localhost:3000
+```
+
+### npm test
+```
+npm test
+```
+
+ - Header Link Test
+ - Reducer Action Test
+ - Chats List Page Basic Test
+ - Friends List Page Basic test
+ - Chatting Page Basic Test
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 배포
+#### 참고사항
+ - 현재 Cherry님 과의 대화는 없습니다. 메세지 전송 시 채팅 창에 생성 됩니다.
+ - 모달창의 경우 외부 클릭 시 모달이 닫힙니다.
+ - 친구의 id의 경우 채팅앱의 회원가입 아이디라 생각하여, 따로 로직을 만들지 않았습니다. (구분을 위해 1111, 2222 등으로 기존 데이터 설정)
+ - 기존 데이터 채팅의 id는 "상대방id-내가보냈는지(Boolean)-보낸날짜시간" 으로 구성되어 있습니다.
+ - 새로 저장되는 채팅의 id는 [nanoid](https://github.com/ai/nanoid) Library를 사용하였습니다.
